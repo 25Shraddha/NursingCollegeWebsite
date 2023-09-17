@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+.container15{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50%,8px;
+    margin-top: 0px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px #4444 ;
+
+
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 30px;
+
+}
+
+.gallery img{
+    width: 100%;
+    border: 2px solid black;
+
+}

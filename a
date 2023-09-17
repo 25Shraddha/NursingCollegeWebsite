@@ -1,0 +1,74 @@
+   <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        upload data
+                    </div>
+                    <div class="card-body">
+                    <?php
+                        if(isset($_SESSION['status']) && $_SESSION!='')
+                        {
+                            ?>
+
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <strong>Hey...!</strong>  <?php echo $_SESSION['status']   ?>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                             </div>
+                        
+                        <?php
+                           unset($_SESSION['status']);
+                        }
+
+
+                        ?>
+                        
+
+                        <form action="doctorcode.php" method="POST" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <label>name</label>
+                                <input type="text" class="form-control" name="name" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label>education</label>
+                                <input type="text" class="form-control" name="education" placeholder="">
+                            </div>
+                          
+                            <div class="form-group">
+                                <label>image</label>
+                                <input type="file" class="form-control"  name="image">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>information</label>
+                                <input type="text" class="form-control" name="information" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label>facebook url</label>
+                                <input type="text" class="form-control" name="facebook" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label>twitter url</label>
+                                <input type="text" class="form-control" name="twitter" placeholder="">
+                            </div> <div class="form-group">
+                                <label>instagram url</label>
+                                <input type="text" class="form-control" name="instagram" placeholder="">
+                            </div> <div class="form-group">
+                                <label>youtube url</label>
+                                <input type="text" class="form-control" name="youtube" placeholder="">
+                            </div>
+
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" name="imagesave" class="btn btn-primary">Save</button>
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
